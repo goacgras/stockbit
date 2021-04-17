@@ -18,6 +18,7 @@
         "typeorm": "0.2.30"
     },
     "scripts": {
-        "start": "nodemon src/index.ts"
+        "start": "nodemon src/index.ts",
+        "typeorm": "ts-node ./node_modules/typeorm/cli.js"
     }
 }

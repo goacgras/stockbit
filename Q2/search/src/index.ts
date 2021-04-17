@@ -5,12 +5,14 @@ dotenv.config();
 
 import { searchRoute } from "./routes/search";
 import { createConnection } from "typeorm";
+import { detailRoute } from "./routes/detail";
 
 const app = express();
 
 app.use(express.json());
 
 app.use(searchRoute);
+app.use(detailRoute);
 
 const start = async () => {
     try {
