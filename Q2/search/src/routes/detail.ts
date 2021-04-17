@@ -1,6 +1,4 @@
-import axios from "axios";
 import { Request, Response, Router } from "express";
-import { Search } from "../entity/Search";
 import { SendRequest } from "../utils/send-request";
 
 const router = Router();
@@ -12,6 +10,7 @@ router.get("/detail", async (req: Request, res: Response) => {
         return res.status(200).send(response);
     } catch (err) {
         console.log(err);
+        throw new Error("Something went wrong");
     }
 });
 

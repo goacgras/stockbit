@@ -1,5 +1,5 @@
 import axios from "axios";
-import { Search } from "../entity/Search";
+import { Search } from "../entities/Search";
 
 export class SendRequest {
     static async generateResponse(title: string, type: string) {

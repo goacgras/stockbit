@@ -10,6 +10,7 @@ router.get("/search", async (req: Request, res: Response) => {
         return res.status(200).send(response);
     } catch (err) {
         console.log(err);
+        throw new Error("Something went wrong");
     }
 });
 

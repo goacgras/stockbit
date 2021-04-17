@@ -1,13 +1,45 @@
 {
     "compilerOptions": {
+        "skipLibCheck": true,
         "lib": ["es5", "es6"],
-        "esModuleInterop": true,
         "target": "es5",
         "module": "commonjs",
         "moduleResolution": "node",
         "outDir": "./dist",
+        "rootDir": ".",
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
-        "sourceMap": true
+        "sourceMap": true,
+        //Additions
+        "esModuleInterop": true,
+        //Strict stuff
+        // "strict": true,
+        "noImplicitAny": true,
+        "strictNullChecks": true,
+        "strictFunctionTypes": true,
+        "strictBindCallApply": true,
+        // "strictPropertyInitialization": true
+        "noImplicitThis": true,
+        //Extra
+        "alwaysStrict": true,
+        // "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noImplicitReturns": true,
+        "noFallthroughCasesInSwitch": true,
+        "resolveJsonModule": true
     }
 }
+
+// {
+//     "compilerOptions": {
+//         "lib": ["es5", "es6"],
+//         "esModuleInterop": true,
+//         "target": "es5",
+//         "module": "commonjs",
+//         "moduleResolution": "node",
+//         "outDir": "./dist",
+//         "emitDecoratorMetadata": true,
+//         "experimentalDecorators": true,
+//         "sourceMap": true
+//     }
+// }
