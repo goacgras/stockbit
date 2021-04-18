@@ -1,3 +1,2 @@
 # stockbit
-
-#### Please select a folder, based on question
+Please select a folder, based on question 
