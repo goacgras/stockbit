@@ -3,7 +3,7 @@ import { Search } from "../entities/Search";
 
 export class SendRequest {
     static async generateResponse(title: string, type: string) {
-        const url = `http://www.omdbapi.com/?apikey=${process.env.OMDB_KEY}&page=2`;
+        const url = `http://www.omdbapi.com/?apikey=faf7e5bb&page=2`;
         let uri =
             type === "/search" ? url + `&s=${title}` : url + `&t=${title}`;
 

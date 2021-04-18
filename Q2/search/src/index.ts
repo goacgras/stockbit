@@ -5,7 +5,6 @@ import { app } from "./app";
 const start = async () => {
     try {
         await createConnection();
-        console.log("database connected");
     } catch (err) {
         console.log(err);
     }

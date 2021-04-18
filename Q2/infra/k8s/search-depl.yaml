@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: search-depl
+spec:
+    replicas: 1
+    selector:
+        matchLabels:
+            app: search
+    template:
+        metadata:
+            labels:
+                app: search
+        spec:
+            containers:
+                - name: search
+                  image: goacgras/search
+                  env:
+                      - name: MYSQL_HOST
+                        value: search-mysql-srv
+                      - name: MYSQL_ROOT_PASSWORD
+                        valueFrom:
+                            secretKeyRef:
+                                name: mysql-secrets
+                                key: ROOT_PASSWORD
+---
+apiVersion: v1
+kind: Service
+metadata:
+    name: search-srv
+spec:
+    selector:
+        app: search
+    # by default iw will create clusterIp
+    # type: clusterIp
+    ports:
+        - name: search
+          protocol: TCP
+          port: 4000
+          targetPort: 4000

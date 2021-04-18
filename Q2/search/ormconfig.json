@@ -1,8 +1,7 @@
 {
     "type": "mysql",
-    "host": "localhost",
+    "host": "search-mysql-srv",
     "port": 3306,
-    "username": "root",
     "password": "password",
     "database": "stockbit",
     "synchronize": false,
